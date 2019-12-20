@@ -2076,6 +2076,175 @@ curl 'https://api.binaryedge.io/v2/query/domains/search?query=A:127.0.0.1' -H 'X
 }
 ```
 
+#### /v2/query/domains/enumeration/{target}
+
+**Note**: Available for Business subscriptions only.
+
+This endpoint attempts to enumerate subdomains from a larger dataset, the validate flag can be used to have all subdomains resolved on the fly and only those with DNS entries behind them returned.
+
+*Parameters*
+
+* validate: [int] Optional, Forces all subdomains to be resolved on request and only live subdomains to be returned. Default: 0 (False)
+
+*Example Output*
+
+```shell
+curl 'https://api.binaryedge.io/v2/query/domains/enumeration/example.com?validate=1' -H 'X-Key:API_KEY'
+```
+
+```json
+{
+  "query": "example.com",
+  "total": 2,
+  "events": [
+    {
+      "fqdn": "example.com",
+      "records": [
+        {
+          "type": "A",
+          "answers": [
+            "93.184.216.34"
+          ]
+        },
+        {
+          "type": "AAAA",
+          "answers": [
+            "2606:2800:220:1:248:1893:25c8:1946"
+          ]
+        },
+        {
+          "type": "NS",
+          "answers": [
+            "b.iana-servers.net",
+            "a.iana-servers.net"
+          ]
+        },
+        {
+          "type": "TXT",
+          "answers": [
+            "v=spf1 -all"
+          ]
+        }
+      ]
+    },
+    {
+      "fqdn": "www.example.com",
+      "records": [
+        {
+          "type": "A",
+          "answers": [
+            "93.184.216.34"
+          ]
+        },
+        {
+          "type": "AAAA",
+          "answers": [
+            "2606:2800:220:1:248:1893:25c8:1946"
+          ]
+        },
+        {
+          "type": "TXT",
+          "answers": [
+            "v=spf1 -all"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### /v2/query/domains/homoglyphs/{target}
+
+**Note**: Available for Business subscriptions only.
+
+This endpoint generates a list of homoglyphs for a base domain and will attempt to resolve all found upon request, if the validate flag isn't used the full list of possible homoglyphs is returned.
+
+*Parameters*
+
+* validate: [int] Optional, Forces all subdomains to be resolved on request and only live subdomains to be returned. Default: 0 (False)
+
+*Example Output*
+
+```shell
+curl 'https://api.binaryedge.io/v2/query/domains/homoglyphs/example.com?validate=1' -H 'X-Key:API_KEY'
+```
+
+```json
+{
+  "query": "example.com",
+  "total": 91,
+  "events": [
+        {
+      "homoglyph": "exannple.com",
+      "records": [
+        {
+          "type": "NS",
+          "answers": [
+            "ns-311.awsdns-38.com",
+            "ns-1030.awsdns-00.org",
+            "ns-532.awsdns-02.net",
+            "ns-1828.awsdns-36.co.uk"
+          ]
+        }
+      ]
+    },
+    {
+      "homoglyph": "exampl3.com",
+      "records": [
+        {
+          "type": "NS",
+          "answers": [
+            "ns-cloud-a2.googledomains.com",
+            "ns-cloud-a3.googledomains.com",
+            "ns-cloud-a4.googledomains.com",
+            "ns-cloud-a1.googledomains.com"
+          ]
+        }
+      ]
+    },
+    {
+      "homoglyph": "exqmple.com",
+      "records": [
+        {
+          "type": "NS",
+          "answers": [
+            "ns-2046.awsdns-63.co.uk",
+            "ns-596.awsdns-10.net",
+            "ns-1082.awsdns-07.org",
+            "ns-413.awsdns-51.com"
+          ]
+        }
+      ]
+    },
+    {
+      "homoglyph": "exampls.com",
+      "records": [
+        {
+          "type": "NS",
+          "answers": [
+            "f1g1ns2.dnspod.net",
+            "f1g1ns1.dnspod.net"
+          ]
+        }
+      ]
+    },
+    {
+      "homoglyph": "exampke.com",
+      "records": [
+        {
+          "type": "NS",
+          "answers": [
+            "v1s1.xundns.com",
+            "v1s2.xundns.com"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
 ### Sensors
 
 #### /v2/query/sensors/ip/{target}
