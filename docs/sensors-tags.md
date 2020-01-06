@@ -44,6 +44,7 @@
  | CVE-2012-0432 | Stack-based buffer overflow in the Novell NCP implementation in NetIQ eDirectory 8.8.7.x before 8.8.7.2 |
  | CVE-2015-4852 | The WLS Security component in Oracle WebLogic Server 10.3.6.0, 12.1.2.0, 12.1.3.0, and 12.2.1.0 allows remote attackers to execute arbitrary commands via a crafted serialized Java object in T3 protocol traffic | 
  | CVE-2015-7808 | The vB_Api_Hook::decodeArguments method in vBulletin 5 Connect 5.1.2 through 5.1.9 allows remote attackers to conduct PHP object injection attacks and execute arbitrary PHP code via a crafted serialized object in the arguments parameter to ajax/api/hook/decodeArguments |
+ | CVE-2015-8562 | Joomla! 1.5.x, 2.x, and 3.x before 3.4.6 allow remote attackers to conduct PHP object injection attacks and execute arbitrary PHP code via the HTTP User-Agent header |
  | CVE-2017-5638 | The Jakarta Multipart parser in Apache Struts 2 2.3.x before 2.3.32 and 2.5.x before 2.5.10.1 has incorrect exception handling and error-message generation during file-upload attempts, which allows remote attackers to execute arbitrary commands via a crafted Content-Type, Content-Disposition, or Content-Length HTTP header, as exploited in the wild in March 2017 with a Content-Type header containing a #cmd= string |
  | CVE-2017-12615 | Apache Tomcat 7.0.0 to 7.0.79 has a remote code execution vulnerability |
  | CVE-2017-17215 | Huawei HG532 with some customized versions has a remote code execution vulnerability |
@@ -67,6 +68,7 @@
  | DTLS_SCANNER | Valid DTLS Connections | 
  | DUCKDUCKBOT | https://duckduckgo.com/ | 
  | DVR_SCANNER | Scanning for DVR devices |
+ | ECSHOP_SCANNER | Scanning for eCShop |
  | EPMD_SCANNER | Erlang Port Mapper Daemon Scanner |
  | ELASTICSEARCH_SCANNER | Scanning for exposed Elasticsearch databases | 
  | EMAIL_SCANNER | Scanning for known email protocols | 
@@ -123,6 +125,8 @@
  | JBIFROST | Also called ADWind, the Adwind Remote Access Trojan (RAT) is a popular Java-based backdoor capable of infecting Windows, Linux, Mac OS and Android operating systems | 
  | JBOSS_MALWARE | Known Malware of JBOSS framework | 
  | JDWP_SCANNER | Scanning for Java Debug Wire Protocol |
+ | JENKINS_SCANNER | Scanning for Jenkins |
+ | JOOMLA_SCANNER | Scanning for Joomla |
  | JUNIPER_SCANNER | Scanning for exposed Juniper network devices | 
  | KERBEROS_SCANNER | Scanning for Kerberos protocol |
  | KGUARD_SCANNER | Scanning for Kguard Cameras | 
@@ -141,6 +145,7 @@
  | MARBLE_COIN_SCANNER | Scanning for Marble Coin | 
  | MASSCAN_SCANNER | Scanner using Masscan |
  | MEMCACHED_SCANNER | Scanning for exposed memcached endpoints | 
+ | METASPLOIT | Actor using the Metasploit | 
  | MICROSOFT_SQL_SERVER | Scanning for exposed Microsoft SQL server | 
  | MIKROTIK_ROUTEROS | Scanning for a remote shell vulnerability on Mikrotik devices running certain versions of RouterOS |
  | MINERPOOL | www.minerpool.net |
@@ -161,6 +166,7 @@
  | NOVELL_NCP_SCANNER | Scanning for Novell NetWare Core Protocol |
  | NUUO_NVR_SCANNER | Scanning for Nuuo CCTV Cameras | 
  | NTP_SCANNER | Scanning for NTP servers |
+ | NVMS9000_DVR_SCANNER | Scanning for NVMS-9000 Digital Video Recorder devices |
  | ONYPHE | Internet wide scanner https://www.onyphe.io/ | 
  | OPENPORTSTATS | Internet wide scanner http://openportstats.com/ |
  | OPENVPN_SCANNER | OpenVPN software scanner |
@@ -202,6 +208,7 @@
  | RPC_SCANNER | Most likely looking for Ethereum Nodes | 
  | RSYNC_SCANNER | Scanning for Rsync servers | 
  | RTSP_SCANNER | Scanning for Realtime Stream Protocol | 
+ | RUBY | Actor using a Ruby-based tool |
  | RWTH_AACHEN_UNIVERSITY | http://www.rwth-aachen.de  RWTH Aachen University or Rheinisch-Westfälische Technische Hochschule Aachen is a research university located in Aachen, North Rhine-Westphalia, Germany |  
  | SAP_SCANNER | Scanning for SAP Servers | 
  | SCADA_SCANNER | Scanning for SCADA protocols | 
