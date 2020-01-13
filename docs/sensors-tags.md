@@ -51,6 +51,7 @@
  | CVE-2018-13379 | Some versions of Fortinet FortiOS under SSL VPN web portal allows an unauthenticated attacker to download system files via HTTP resource requests |
  | CVE-2019-11510 | File reading vulnerability in Pulse Secure Pulse Connect Secure |
  | CVE-2019-15107 | Command injection vulnerability on Webmin through 1.920 |
+ | CVE-2019-19781 | An issue was discovered in Citrix Application Delivery Controller (ADC) and Gateway 10.5, 11.1, 12.0, 12.1, and 13.0. They allow Directory Traversal |
  | CYBERGREEN | The CyberGreen Institute is a global non-profit and collaborative organization conducting activities focused on helping to improve the health of the global Cyber Ecosystem |
  | CYMRU | http://www.team-cymru.com |
  | DAHUA_DVR_SCANNER | Scanning for Dahua DVR devices |
