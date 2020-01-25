@@ -164,6 +164,12 @@ The Web module attempts to connect to an HTTP server and extract the web technol
 
 See [More Info](modules/web.md "web")
 
+#### webv2
+
+The Webv2 module attempts to connect to an HTTP server and extract HTTP headers, redirects, page title, favicon, HTML source code, the web technologies being used and take a screenshot of the web page. It combines and upgrades upon the functionality of _http_, _https_ and _web_.
+
+See [More Info](modules/webv2.md "webv2")
+
 ### Protocols
 
 #### ssl-simple
