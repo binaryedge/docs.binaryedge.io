@@ -157,7 +157,7 @@ These are optional parameters that can alter the behaviour of the module. These 
             "title":"badssl.com",
             "url":"https://badssl.com:443/",
             "path":"/",
-            "protocol_version":11
+            "protocol_version":11,
             "redirects":[
 
             ],
