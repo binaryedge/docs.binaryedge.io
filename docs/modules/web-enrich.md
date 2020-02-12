@@ -144,55 +144,46 @@ These are optional parameters that can alter the behaviour of the module. These 
                 ],
                 "users":[
                     {
-                        "id":1,
                         "name":"admin",
                         "username":"admin",
                         "email_md5":"438ad82c7584d955876a96f694069211"
                     },
                     {
-                        "id":11,
                         "name":"Amanda Masick",
                         "username":"amanda",
                         "email_md5":"59f73c3fc839a89d2c5248573631febf"
                     },
                     {
-                        "id":9,
                         "name":"Leslee Detillo",
                         "username":"leslee",
                         "email_md5":"13feed229c1e27813af090afbff8b130"
                     },
                     {
-                        "id":3,
                         "name":"Lizzeth Flores",
                         "username":"lizzeth",
                         "email_md5":"3c51ada4e9066897cb481a500a09a7ec"
                     },
                     {
-                        "id":5,
                         "name":"Michelle Tea",
                         "username":"michelle",
                         "email_md5":"3e0ed170566dd3d6011c3bb27408714a"
                     },
                     {
-                        "id":10,
                         "name":"Roberto Bustamante",
                         "username":"roberto",
                         "email_md5":"ddbefa2bdd2e80de62ae760589c14cd8"
                     },
                     {
-                        "id":8,
                         "name":"Ryan Gaeta",
                         "username":"ryan-g",
                         "email_md5":"1b13ba57e6b8dd6bb3295cfff0555420"
                     },
                     {
-                        "id":12,
                         "name":"Simone Beckom",
                         "username":"simone-beckom",
                         "email_md5":"d13a74767cba97d3e7d5d49293215b64"
                     },
                     {
-                        "id":6,
                         "name":"Sodi Hundal",
                         "username":"sodi",
                         "email_md5":"137a9f37891b210636af93e8b62e2290"
