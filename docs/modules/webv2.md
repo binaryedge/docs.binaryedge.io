@@ -124,13 +124,13 @@ These are optional parameters that can alter the behaviour of the module. These 
         * content - Full HTML content (if not uploaded)
         * sha256_hash - SHA256 hash of the HTML content
         * ssdeep_hash - SSDeep hash of the HTML content (allows for similarity comparison)
-    * rendered - Rendered content of the webpage
+    * rendered - Rendered content of the webpage (optional, only present if _render_ option is used)
         * link - URL of the extracted HTML content (if not inline)
         * content - Full HTML content (if not uploaded)
         * sha256_hash - SHA256 hash of the HTML content
         * ssdeep_hash - SSDeep hash of the HTML content (allows for similarity comparison)
         * screenshot - URL of the screenshot of the rendered webpage
-    * apps - Web technologies identified on the server
+    * apps - Web technologies identified on the server (optional, only present if _webapps_ options is used)
         * name - Name of the technology
         * confidence - Confidence level for the match
         * version - Version of the technology
