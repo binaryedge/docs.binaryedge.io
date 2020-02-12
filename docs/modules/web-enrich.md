@@ -93,7 +93,7 @@ These are optional parameters that can alter the behaviour of the module. These 
                 "route_domain":"string",
                 "ipv6":"bool"
             },
-            "secrets":{
+            "secrets": {
                 "amazon_aws_s3_url":"string",
                 "square_oauth_secret":"string"
             }
@@ -104,7 +104,75 @@ These are optional parameters that can alter the behaviour of the module. These 
 
 ### Contents of the fields:
 
-
+- http_version - HTTP version
+- ssl - If the connection was made in HTTPS
+- fqdn - Fully Qualified Domain name of the web server
+- headers - Header information from the web server
+- redirects - List of redirects before reaching final response
+- url - Calculated url of the web application
+- name - Name of the technology
+- category - Categories of the technology
+- drupal - Drupal Plugin
+    - version - List with the version or possible versions of the technology
+    - cpe - CPE of the technology
+    - confidence - Confidence level for the match (decreases based on checks for a full match)
+    - modules - Information about the modules present
+        - TBD
+- f5_bigip - F5 BigIP Plugin
+- joomla - Joomla Plugin
+    - version - List with the version or possible versions of the technology
+    - cpe - CPE of the technology
+    - confidence - Confidence level for the match (decreases based on checks for a full match)
+    - components - Information about the components present
+        - TBD
+    - modules - Information about the modules present
+        - TBD
+    - plugins - Information about the plugins present
+        - TBD
+    - templates - Information about the templates present
+        - TBD
+- magento - Magento Plugin
+    - version - List with the version or possible versions of the technology
+    - type - Type of Magento Installation (Community or Enterprise)
+    - cpe - CPE of the technology
+    - confidence - Confidence level for the match (decreases based on checks for a full match)
+    - cache_leak - Check of Cache Leak problem
+    - internal_path - Internal path of the web application
+- umbraco - Umbraco Plugin
+    - version - List with the version or possible versions of the technology
+    - cpe - CPE of the technology
+    - confidence - Confidence level for the match (decreases based on checks for a full match)
+    - internal_information - Internal WebApp/Machine Information
+        - physical_path - Internal path of the web application
+        - local_address - Local address of the machine
+        - remote_address - Remote address of the machine
+        - remote_host - Remote Host of the connection
+        - remote_port - Remote Port of the connection
+        - http_x_forwarded_for - Host of connection through HTTP Proxy or Load balancer
+        - http_x_forwarded_for_port - Port of connection through HTTP Proxy or Load balancer
+- wordpress - WordPress plugin
+    - version - List with the version or possible versions of the technology
+    - cpe - CPE of the technology
+    - confidence - Confidence level for the match (decreases based on checks for a full match)
+    - plugins - Information about the plugins present
+        - TBD
+    - users - Information about the users present 
+        - TBD
+    - directory_listing - Paths that have directory listing
+    - internal_path - Internal path of the web application
+- citrix_netscaler - Citrix Netscaler plugin
+    - name - Name of the Citrix Netscaler cookie
+    - host - Host of the Citrix Netscaler machine
+    - port - Port of the Citrix Netscaler machine
+- f5_bigip_loadbalancer - F5 BigIP Load Balancer Plugin
+    - pool_name - Pool Name of the F5 BigIP Load Balancer
+    - host - Host of the F5 BigIP Load Balancer
+    - port - Port of the F5 BigIP Load Balancer
+    - route_domain - Route Domain of the F5 BigIP Load Balancer
+    - ipv6 - If host is IPv6
+- secrets - Secrets Plugin
+    - amazon_aws_s3_url - Amazon s3 bucket url
+    - square_oauth_secret - Square oauth secret
 
 
 ## web-enrich Event Example
