@@ -15,6 +15,13 @@ These are optional parameters that can alter the behaviour of the module. These 
 - extended - Extend functionalities of plugins. This could be tests that would take some time
     - "config":{"extended":true}
 
+Features of the extended flag (**currently available**):
+
+- WordPress Plugin:
+    - If no users were found it will try to enumerate the first 50 users in another way
+    - It will check if the top 200 plugins are installed
+
+
 ## Schema
 
 ### web-enrich Event Schema
