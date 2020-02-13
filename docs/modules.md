@@ -152,23 +152,23 @@ See [More Info](modules/mqtt.md "mqtt")
 
 ### HTTP / Web
 
-#### http / https
-
-The HTTP/HTTPS modules attempt to connect to an HTTP server and extract HTTP headers, redirects, page title and HTML source code.
-
-See [More Info](modules/http.md "http")
-
-#### web
-
-The Web module attempts to connect to an HTTP server and extract the web technologies being used, as well as headers, source code and take a screenshot of the web page.
-
-See [More Info](modules/web.md "web")
-
 #### webv2
 
 The Webv2 module attempts to connect to an HTTP server and extract HTTP headers, redirects, page title, favicon, HTML source code, the web technologies being used and take a screenshot of the web page. It combines and upgrades upon the functionality of _http_, _https_ and _web_.
 
 See [More Info](modules/webv2.md "webv2")
+
+#### web-enrich
+
+The web-enrich module attempts to connect to an HTTP server and extract HTTP headers, redirects, HTML source code, the web technologies and enrich data that the module webv2 couldn't find or doesn't look for.
+
+See [More Info](modules/web-enrich.md "web-enrich")
+
+#### http / https
+
+The HTTP/HTTPS modules attempt to connect to an HTTP server and extract HTTP headers, redirects, page title and HTML source code.
+
+See [More Info](modules/http.md "http")
 
 ### Protocols
 
