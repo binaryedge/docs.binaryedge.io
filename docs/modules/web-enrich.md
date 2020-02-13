@@ -189,7 +189,7 @@ Features of the extended flag (**currently available**):
     ...
     "result": {
         "data":{
-            "url":"https://www.intactinfo.com/",
+            "url":"https://URL/",
             "name":"WordPress",
             "category":[
                 "CMS",
@@ -206,73 +206,43 @@ Features of the extended flag (**currently available**):
                         "name":"WP Social Icons",
                         "slug":"wp-social-icons",
                         "version":"1.1",
-                        "site_url":"https://www.intactinfo.com/wp-content/plugins/wp-social-icons/readme.txt",
+                        "site_url":"https://URL/wp-content/plugins/wp-social-icons/readme.txt",
                         "plugin_url":"https://plugins.svn.wordpress.org/wp-social-icons/"
                     },
                     {
                         "name":"Contact Form 7",
                         "slug":"contact-form-7",
                         "version":"4.4.1",
-                        "site_url":"https://www.intactinfo.com/wp-content/plugins/contact-form-7/readme.txt",
+                        "site_url":"https://URL/wp-content/plugins/contact-form-7/readme.txt",
                         "plugin_url":"https://plugins.svn.wordpress.org/contact-form-7/"
                     }
                 ],
                 "users":[
                     {
-                        "name":"admin",
-                        "username":"admin",
-                        "email_md5":"438ad82c7584d955876a96f694069211"
+                        "name":"axxxxn",
+                        "username":"axxxxn",
+                        "email_md5":"43xxxxxxxxxxxxxxxxxxxxxxxxxxxx11"
                     },
                     {
-                        "name":"Amanda Masick",
-                        "username":"amanda",
-                        "email_md5":"59f73c3fc839a89d2c5248573631febf"
+                        "name":"Axxxxxxxxxxxxk",
+                        "username":"axxxxxa",
+                        "email_md5":"59xxxxxxxxxxxxxxxxxxxxxxxxxxxxbf"
                     },
                     {
-                        "name":"Leslee Detillo",
-                        "username":"leslee",
-                        "email_md5":"13feed229c1e27813af090afbff8b130"
-                    },
-                    {
-                        "name":"Lizzeth Flores",
-                        "username":"lizzeth",
-                        "email_md5":"3c51ada4e9066897cb481a500a09a7ec"
-                    },
-                    {
-                        "name":"Michelle Tea",
-                        "username":"michelle",
-                        "email_md5":"3e0ed170566dd3d6011c3bb27408714a"
-                    },
-                    {
-                        "name":"Roberto Bustamante",
-                        "username":"roberto",
-                        "email_md5":"ddbefa2bdd2e80de62ae760589c14cd8"
-                    },
-                    {
-                        "name":"Ryan Gaeta",
-                        "username":"ryan-g",
-                        "email_md5":"1b13ba57e6b8dd6bb3295cfff0555420"
-                    },
-                    {
-                        "name":"Simone Beckom",
-                        "username":"simone-beckom",
-                        "email_md5":"d13a74767cba97d3e7d5d49293215b64"
-                    },
-                    {
-                        "name":"Sodi Hundal",
-                        "username":"sodi",
-                        "email_md5":"137a9f37891b210636af93e8b62e2290"
+                        "name":"Lxxxxxxxxxxo",
+                        "username":"lxxxxxe",
+                        "email_md5":"13xxxxxxxxxxxxxxxxxxxxxxxxxxxx30"
                     }
                 ],
                 "directory_listing":[
                     "/wp-includes/",
                     "/wp-content/uploads/"
                 ],
-                "internal_path":""
+                "internal_path":"/home/naxxxxxor/public_html/"
             },
             "http_version":"HTTP/1.1",
             "ssl":true,
-            "fqdn":"www.intactinfo.com",
+            "fqdn":"URL",
             "headers":{
                 "date":"Wed, 12 Feb 2020 01:15:43 GMT",
                 "content-type":"text/html; charset=UTF-8",
@@ -280,8 +250,8 @@ Features of the extended flag (**currently available**):
                 "connection":"keep-alive",
                 "set-cookie":"__cfduid=d3f69fd24fe38afa5984d479c144382501581470142; expires=Fri, 13-Mar-20 01:15:42 GMT; path=/; domain=.intactinfo.com; HttpOnly; SameSite=Lax",
                 "x-powered-by":"PHP/7.2.27",
-                "x-pingback":"https://www.intactinfo.com/xmlrpc.php",
-                "link":"<https://www.intactinfo.com/wp-json/>; rel=\"https://api.w.org/\", <https://www.intactinfo.com/>; rel=shortlink",
+                "x-pingback":"https://URL/xmlrpc.php",
+                "link":"<https://URL/wp-json/>; rel=\"https://api.w.org/\", <https://URL/>; rel=shortlink",
                 "cache-control":"max-age=600",
                 "expires":"Wed, 12 Feb 2020 01:25:43 GMT",
                 "vary":"Accept-Encoding,User-Agent",
@@ -295,13 +265,13 @@ Features of the extended flag (**currently available**):
             "redirects":[
                 {
                     "status_code":301,
-                    "redirect_uri":"http://68.171.209.56:80/",
+                    "redirect_uri":"http://IP:80/",
                     "headers":{
                         "date":"Wed, 12 Feb 2020 01:15:41 GMT",
                         "server":"Apache",
                         "x-powered-by":"PHP/7.2.27",
-                        "x-pingback":"http://www.intactinfo.com/xmlrpc.php",
-                        "location":"https://68.171.209.56/",
+                        "x-pingback":"http://URL/xmlrpc.php",
+                        "location":"https://IP/",
                         "cache-control":"max-age=600",
                         "expires":"Wed, 12 Feb 2020 01:25:41 GMT",
                         "strict-transport-security":"max-age=31536000",
@@ -314,13 +284,13 @@ Features of the extended flag (**currently available**):
                 },
                 {
                     "status_code":301,
-                    "redirect_uri":"https://68.171.209.56/",
+                    "redirect_uri":"https://IP/",
                     "headers":{
                         "date":"Wed, 12 Feb 2020 01:15:42 GMT",
                         "server":"Apache",
                         "x-powered-by":"PHP/7.2.27",
-                        "x-pingback":"https://www.intactinfo.com/xmlrpc.php",
-                        "location":"https://www.intactinfo.com/",
+                        "x-pingback":"https://URL/xmlrpc.php",
+                        "location":"https://URL/",
                         "cache-control":"max-age=600",
                         "expires":"Wed, 12 Feb 2020 01:25:42 GMT",
                         "strict-transport-security":"max-age=31536000",
