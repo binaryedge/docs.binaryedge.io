@@ -63,7 +63,9 @@ Features of the extended flag (**currently available**):
                 "cpe":"string",
                 "confidence":"int",
                 "cache_leak":"bool",
-                "internal_path":"string"
+                "internal_information":{
+                    "internal_path":"string"
+                }
             },
             "umbraco": {
                 "version":"list",
@@ -86,7 +88,9 @@ Features of the extended flag (**currently available**):
                 "plugins":"list",
                 "users":"list",
                 "directory_listing":"list",
-                "internal_path":"string"
+                "internal_information": {
+                    "internal_path":"string"
+                }
             },
             "citrix_netscaler": {
                 "name":"string",
@@ -101,8 +105,9 @@ Features of the extended flag (**currently available**):
                 "ipv6":"bool"
             },
             "secrets": {
-                "amazon_aws_s3_url":"string",
-                "square_oauth_secret":"string"
+                "amazon_aws_s3_url":"list",
+                "square_oauth_secret":"list",
+                "amazon_aws_keys":"list"
             }
         }
     }
@@ -172,6 +177,7 @@ Features of the extended flag (**currently available**):
     - ipv6 - If host is IPv6
 - secrets - Secrets Plugin
     - amazon_aws_s3_url - Amazon s3 bucket url
+    - amazon_aws_keys - Amazon aws keys
     - square_oauth_secret - Square oauth secret
 
 
@@ -231,7 +237,9 @@ Features of the extended flag (**currently available**):
                     "/wp-includes/",
                     "/wp-content/uploads/"
                 ],
-                "internal_path":"/home/naxxxxxor/public_html/"
+                "internal_information": {
+                    "internal_path":"/home/naxxxxxor/public_html/"
+                }
             },
             "http_version":"HTTP/1.1",
             "ssl":true,
