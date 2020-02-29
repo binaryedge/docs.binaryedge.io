@@ -86,6 +86,7 @@ Features of the extended flag (**currently available**):
                 "cpe":"string",
                 "confidence":"int",
                 "plugins":"list",
+                "themes":"list",
                 "users":"list",
                 "directory_listing":"list",
                 "internal_information": {
@@ -214,6 +215,15 @@ Features of the extended flag (**currently available**):
                         "version":"4.4.1",
                         "site_url":"https://URL/wp-content/plugins/contact-form-7/readme.txt",
                         "plugin_url":"https://plugins.svn.wordpress.org/contact-form-7/"
+                    }
+                ],
+                "themes":[
+                    {
+                        "name": "RT-Theme 17",
+                        "slug": "rttheme17",
+                        "version": "2.7.1",
+                        "site_url": "http://URL/wp-content/themes/rttheme17/style.css",
+                        "theme_url": "http://themeforest.net/user/stmcan"
                     }
                 ],
                 "users":[
