@@ -49,6 +49,11 @@ Search by IP address or CIDR.
 
     e.g ip:"192.168.1.1/24" or ip:192.168.1.1
 
+### ipv4: (boolean)
+Search for IPv4 results:
+
+    e.g ipv4:true
+
 ### ipv6: (boolean)
 Search for IPv6 results:
 
@@ -161,6 +166,11 @@ Search by product versions. Better used together with product.
 
 ## RDP
 
+### reason: (string)
+Search by RDP status reason.
+
+    e.g. rdp.reason:error
+
 ### security: (string)
 Search by RDP security detected.
 
@@ -187,6 +197,11 @@ Search by VNC height.
 
     e.g. vnc.height:768
 
+### msg: (string)
+Search by VNC returned message.
+
+    e.g. vnc.msg:incompatible
+
 ### title: (string)
 Search by VNC title.
 
@@ -204,6 +219,11 @@ Search by VNC width.
 
 
 ## X11
+
+### connected: (boolean)
+Search by whether X11 server was successfully connected to or not.
+
+    e.g. x11.connected:true
 
 ### height: (int)
 Search by X11 height.
@@ -286,18 +306,28 @@ Search by HASSH algorithms string.
 
 ## SSL
 
-### cert.issuer.commonName: (string)
+### cert.issuer.common_name: (string)
 Search by leaf certificate issuer's Common Name.
 
-    e.g. ssl.cert.issuer.commonName:microsoft
+    e.g. ssl.cert.issuer.common_name:microsoft
 
-### cert.issuer.organizationName: (string)
+### cert.issuer.common_name: (string)
+Search by leaf certificate issuer's Country Name.
+
+    e.g. ssl.cert.issuer.country_name:cn
+
+### cert.issuer.organization_name: (string)
 Search by leaf certificate issuer's Organization Name.
 
-    e.g. ssl.cert.issuer.organizationName:microsoft
+    e.g. ssl.cert.issuer.organization_name:microsoft
+
+### cert.issuer.organizational_unit_name: (string)
+Search by leaf certificate issuer's Organizational Unit Name.
+
+    e.g. ssl.cert.issuer.organizational_unit_name:microsoft
 
 ### cert.issuer_names: (string)
-Search by leaf certificate issuer's names (commonName, organizationName combined).
+Search by leaf certificate issuer's names (common_name, organization_name, organizational_unit_name combined).
 
     e.g. ssl.cert.issuer_names:kubernetes
 
@@ -312,6 +342,26 @@ Search by leaf certificate's creation date.
 
     e.g. ssl.cert.not_before:[2018-12-01 TO 2019-01-01]
          ssl.cert.not_before:2019-01-01
+
+### cert.public_key_info.algorithm: (string)
+Search by Public Key algorithm.
+
+    e.g. cert.public_key_info.algorithm:ec
+
+### cert.public_key_info.curve: (string)
+Search by Public Key curve.
+
+    e.g. cert.public_key_info.curve:secp256r1
+
+### cert.public_key_info.key_size: (string)
+Search by Public Key key size.
+
+    e.g. cert.public_key_info.key_size:2048
+
+### cert.public_key_info.sha256_fingerprint: (string)
+Search by Public Key SHA256 fingerprint.
+
+    e.g. cert.public_key_info.sha256_fingerprint:"4f:53:aa:f3:c6:6b:28:32:3f:77:cf:d7:1b:96:f8:7b:a0:b6:ee:a3:12:a7:62:b1:0a:c5:a1:2d:7d:29:09:e9"
 
 ### cert.serial: (string)
 Search by leaf certificate's Serial Number.
@@ -343,18 +393,23 @@ Search by leaf certificate's SPKI subject fingerprint.
 
     e.g. ssl.cert.spki_subject_fingerprint:"d0:0f:ae:7c:ae:5d:c8:b9:37:38:fb:b3:5f:6a:24:cc:e9:51:71:ca:ba:21:3f:73:c5:cd:f6:bc:5b:bf:03:1e"
 
-### cert.subject.commonName: (string)
+### cert.subject.common_name: (string)
 Search by leaf certificate subject's Common Name.
 
-    e.g. ssl.cert.subject.commonName:microsoft
+    e.g. ssl.cert.subject.common_name:microsoft
 
-### cert.subject.organizationName: (string)
+### cert.subject.organization_name: (string)
 Search by leaf certificate subject's Organization Name.
 
-    e.g. ssl.cert.subject.organizationName:microsoft
+    e.g. ssl.cert.subject.organization_name:microsoft
+
+### cert.subject.organizational_unit_name: (string)
+Search by leaf certificate subject's Organizational Unit Name.
+
+    e.g. ssl.cert.subject.organizational_unit_name:microsoft
 
 ### cert.subject_names: (string)
-Search by leaf certificate subject's names (commonName, organizationName combined).
+Search by leaf certificate subject's names (common_name, organization_name, organizational_unit_name combined).
 
     e.g. ssl.cert.subject_names:kubernetes
 
@@ -387,21 +442,48 @@ Search by leaf certificate extended key usage extension parameters.
 
 #### Example parameters
 
+* adobe_authentic_documents_trust
 * any_extended_key_usage
+* capwap_ac
+* capwap_wtp
 * client_auth
 * code_signing
+* dvcs
 * eap_over_lan
 * eap_over_ppp
 * email_protection
+* ike_intermediate
 * ipsec_end_system
 * ipsec_ike
 * ipsec_tunnel
 * ipsec_user
+* microsoft_document_signing
+* microsoft_efs
+* microsoft_efs_recovery
+* microsoft_embedded_nt
+* microsoft_key_recovery
+* microsoft_lifetime_signing
+* microsoft_nt5
+* microsoft_oem_whql
+* microsoft_qualified_subordination
+* microsoft_root_list_signer
 * microsoft_server_gated
 * microsoft_smart_card_logon
+* microsoft_time_stamp_signing
+* microsoft_trust_list_signing
+* microsoft_whql
 * ocsp_signing
+* piv_content_signing
+* pkinit_kpclientauth
 * pkinit_kpkdc
+* scvp_client
+* scvp_server
+* secure_shell_client
+* secure_shell_server
+* send_owner
+* send_router
 * server_auth
+* sip_domain
 * time_stamping
 
 ### ciphers: (string)
@@ -429,10 +511,15 @@ Search by JA3 fingerprint hash:
 
     e.g. ssl.server_info.ja3_digest:"8a17b6c8d5c6e1711cb236cc77aaa388"
 
-### ssl_cipher_supported: (string)
+### ja3_description: (string)
+Search by JA3 description:
+
+    e.g. ssl.server_info.ja3_description:nginx
+
+### openssl_cipher_string_supported: (string)
 Search by SSL cypher supported.
 
-    e.g. ssl.server_info.ssl_cipher_supported:"AES256-SHA"
+    e.g. ssl.server_info.openssl_cipher_string_supported:"AES256-SHA"
 
 ### tls_wrapped_protocol_string: (string)
 Search by TLS protocol string.
@@ -485,12 +572,103 @@ Search for ROBOT.
     e.g. ssl.vulnerabilities.robot.robot_result_enum:NOT_VULNERABLE_NO_ORACLE
 
 
-## HTTP
+## Web
+
+### body.content: (string)
+Search by HTTP body.
+
+    e.g. web.body.content:bitcoin
+
+### body.sha256: (string)
+Search by HTTP body SHA256 fingerprint.
+
+    e.g. web.body.sha256:"a9aa9ec7ef3ec92e7eb52220a9f0cb578ff2ba0a71cb3e9c1a0b828857529fcc"
+
+### body.ssdeep: (string)
+Search by HTTP body SSDEEP fingerprint.
+
+    e.g. web.body.ssdeep:"333a484c75636771434d4142623a48535072"
+
+### favicon.md5: (string)
+Search by favicon MD5 fingerprint.
+
+    e.g. web.favicon.md5:"a3d6fc11b6c0dc1f43742944823954d3"
+
+### favicon.mmh3: (string)
+Search by favicon MMH3 fingerprint.
+
+    e.g. web.favicon.mmh3:"2780979020"
+
+### headers.*: (string)
+Search by HTTP headers.
+
+    e.g. web.headers.accept:"json"
+
+#### Available headers
+[Search Available Headers](search-web-headers.md)
+
+### path: (string)
+Search by HTTP path.
+
+    e.g. web.path:"index.php"
+
+### rendered.content: (string)
+Search by rendered HTTP body.
+
+    e.g. web.rendered.content:bitcoin
+
+### rendered.sha256: (string)
+Search by rendered HTTP body SHA256 fingerprint.
+
+    e.g. web.rendered.sha256:"a9aa9ec7ef3ec92e7eb52220a9f0cb578ff2ba0a71cb3e9c1a0b828857529fcc"
+
+### rendered.ssdeep: (string)
+Search by rendered HTTP body SSDEEP fingerprint.
+
+    e.g. web.rendered.ssdeep:"333a484c75636771434d4142623a48535072"
+
+### server: (string)
+Search by HTTP Server header.
+
+    e.g. web.server:apache
+
+### status.code: (int)
+Search by HTTP status code.
+
+    e.g. web.status.code:200
+
+### status.message: (string)
+Search by HTTP status message.
+
+    e.g. web.status.message:ok
+
+### title: (string)
+Search by HTTP title.
+
+    e.g. web.title:amazon
+
+### url: (string)
+Search by final url.
+
+    e.g. web.url:"index.php"
+
+
+## HTTP (deprecated)
 
 ### body: (string)
 Search by HTTP body.
 
     e.g. http.body:bitcoin
+
+### header_order: (string)
+Search by HTTP header order fingerprint string.
+
+    e.g. http.header_order:"user_agent,host,connection"
+
+### header_order_hash: (string)
+Search by HTTP header order fingerprint hash.
+
+    e.g. http.header_order_hash:"ea54a5e969c426b7815aa5540ab4dd93"
 
 ### href: (string)
 Search by HTTP href.
@@ -545,6 +723,11 @@ Search by whether MQTT has auth enabled or not.
 
     e.g. mqtt.auth:false
 
+### connected: (boolean)
+Search by whether MQTT server was successfully connected to or not.
+
+    e.g. mqtt.connected:true
+
 ### num_topics: (int)
 Search by MQTT number of topics.
 
@@ -578,10 +761,20 @@ Search by whether Kubernates has auth enabled or not.
 
     e.g. kubernetes.auth_required:false
 
+### connected: (boolean)
+Search by whether Kubernates server was successfully connected to or not.
+
+    e.g. kubernetes.connected:true
+
 ### pods_names: (string)
 Search by Kubernetes pods names.
 
     e.g. kubernetes.pods_names:credit
+
+### version: (string)
+Search by Kubernetes version.
+
+    e.g. kubernetes.version:"1.15"
 
 
 ## RSYNC
@@ -648,6 +841,7 @@ Search by TOR router name.
 
     e.g. tor.router_name:"xenial"
 
+
 ## MongoDB
 
 #### Available search fields
@@ -658,7 +852,7 @@ Search by TOR router name.
 * mongodb.readonly (boolean)
 * mongodb.serverInfo (string)
 * mongodb.totalSize (int)
-* mongodb.version (string		
+* mongodb.version (string)
 
 
 ## ElasticSearch
@@ -671,30 +865,30 @@ Search by TOR router name.
 * elasticsearch.build_type (string)
 * elasticsearch.cluster_name (string)
 * elasticsearch.cluster_nodes (int)
+* elasticsearch.docs (int) - number of documents
 * elasticsearch.hostname (string)
-* elasticsearch.name (string)
-* elasticsearch.node_name (string)
-* elasticsearch.version (string)
-* elasticsearch.docs (int, number of documents)
-* elasticsearch.indices (string, name of indices)
+* elasticsearch.indices (string) - name of indices
 * elasticsearch.indices_raw (string)
 * elasticsearch.jvm.version (string)
 * elasticsearch.jvm.vm_name (string)
 * elasticsearch.jvm.vm_vendor (string)
 * elasticsearch.jvm.vm_version (string)
 * elasticsearch.modules (string)
+* elasticsearch.name (string)
+* elasticsearch.node_name (string)
 * elasticsearch.os.arch (string)
 * elasticsearch.os.cpu.model (string)
 * elasticsearch.os.cpu.vendor (string)
 * elasticsearch.os.name (string)
 * elasticsearch.os.pretty_name (string)
 * elasticsearch.os.version (string)
-* elasticsearch.ostype (string)
 * elasticsearch.plugins (string)
 * elasticsearch.roles (string)
 * elasticsearch.settings (string)
+* elasticsearch.size (int)
 * elasticsearch.size_in_bytes (int)
 * elasticsearch.total_indexing_buffer (int)
+* elasticsearch.version (string)
 
 
 ## Cassandra
@@ -703,91 +897,59 @@ Search by TOR router name.
 
 * cassandra.cluster (string)
 * cassandra.cluster_name (string)
+* cassandra.cql_version (string)
 * cassandra.datacenter (string)
 * cassandra.dse (boolean)
 * cassandra.dse_version (string)
-* cassandra.cql_version (string)
-* cassandra.rack (string)
-* cassandra.version (string)
-* cassandra.thrift_version (string)
 * cassandra.keyspaces (string)
 * cassandra.keyspace_names (string)
+* cassandra.rack (string)
 * cassandra.table_names (string)
+* cassandra.thrift_version (string)
+* cassandra.version (string)
 
 
 ## Redis
 
 #### Available search fields
 
-* redis.aof_base_size (string)
-* redis.aof_current_size (string)
-* redis.aof_enabled (int)
-* redis.arch_bits (int)
-* redis.atomicvar_api (string)
-* redis.auth_not_required (string)
-* redis.cluster_enabled (string)
+* redis.aof_enabled (string)
+* redis.arch_bits (string)
+* redis.cluster_enabled (int)
 * redis.connected_slaves (int)
-* redis.databases (string)
 * redis.dbs (int)
 * redis.keys (int)
 * redis.maxmemory (string)
-* redis.maxmemory_human (string)
-* redis.maxmemory_policy (string)
 * redis.multiplexing_api (string)
-* redis.nodecount (string)
 * redis.os (string)
 * redis.redis_build_id (string)
 * redis.redis_mode (string)
 * redis.redis_version (string)
-* redis.repl_backlog_size (string)
-* redis.repl_sync_enabled (string)
+* redis.repl_backlog_size (int)
 * redis.role (string)
-* redis.ssl_enabled (string)
-* redis.ssl_protocols (string)
 * redis.stats (string)
 * redis.uptime_in_days (int)
 * redis.uptime_in_seconds (int)
 * redis.used_memory (int)
-* redis.used_memory_dataset (string)
 * redis.used_memory_human (string)
 * redis.used_memory_lua (int)
-* redis.used_memory_lua_human (string)
 * redis.used_memory_overhead (string)
 * redis.used_memory_peak (int)
 * redis.used_memory_peak_human (string)
-* redis.used_memory_rss (int)
-* redis.used_memory_rss_human (string)
-* redis.used_memory_scripts (string)
-* redis.used_memory_scripts_human (string)
+* redis.used_memory_rss (string)
 * redis.used_memory_startup (string)
-* redis.versions (int)
+* redis.versions (string)
 
 
 ## Memcached
 
 #### Available search fields
 
-* memcached.app_impl_used (string)
-* memcached.app_version (string)
 * memcached.bytes (int)
-* memcached.commandargs (string)
-* memcached.current_bytes (int)
-* memcached.db_count (int)
-* memcached.db_size (int)
-* memcached.engine_maxbytes (int)
-* memcached.free_bytes (int)
-* memcached.ibuffer_size (int)
-* memcached.local (string)
-* memcached.memcached_version (string)
-* memcached.num_servers (int)
-* memcached.num_suspect_servers (int)
-* memcached.peer (string)
 * memcached.pointer_size (int)
-* memcached.rep_conn_on (string)
-* memcached.rep_state (string)
 * memcached.replication (string)
 * memcached.server (string)
-* memcached.tcp_nodelay (string)
+* memcached.size (int)
 * memcached.total_items (int)
 * memcached.uptime (int)
 * memcached.version (string)
@@ -798,4 +960,5 @@ Search by TOR router name.
 #### Available search fields
 
 * rethinkdb.database_names (string)
+* rethinkdb.databases (string)
 * rethinkdb.tables_names (string)
