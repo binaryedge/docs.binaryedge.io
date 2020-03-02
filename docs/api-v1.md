@@ -369,7 +369,7 @@ List of events for the specified host, with events for each time that:
 
 *Parameters*
 
-* target: [String] target IP address or CIDR up to /24
+* target: [String] Target IP address or CIDR up to /24
 
 *Output*
 
@@ -410,7 +410,7 @@ Details about an Host. List of recent events for the specified host, including d
 
 *Parameters*
 
-* target: [String] target IP address or CIDR up to /24
+* target: [String] Target IP address or CIDR up to /24
 
 *Output*
 
@@ -447,12 +447,13 @@ curl 'https://api.binaryedge.io/v1/query/latest/222.208.xxx.xxx' -H 'X-Token:API
 
 #### /v1/query/search
 
-Events based on a Query. List of recent events for the given query, including details of exposed ports and services. Can be used with specific parameters and/or full-text search.
+Events based on a Query. Stream of recent events for the given query, including details of exposed ports and services. Can be used with specific parameters and/or full-text search.
 
 *Parameters*
 
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](search.md) for details on what parameters can be used.
-* only_ips: [Int] Optional. If selected, only output IP addresses, ports and protocols.
+* only_ips: [Int] Optional. If _only\_ips=1_, only output IP addresses, ports and protocols. 
+    * Default: _only\_ips=0_
 
 *Output*
 
@@ -502,8 +503,9 @@ Statistics of recent events for the given query. Can be used with specific param
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](search.md) for details on what parameters can be used.
 * type: [String] Type of statistic we want to obtain. Possible types include:
     * _ports_, _products_, _versions_, _tags_, _services_, _countries_, _asn_.
-* order: [String] Whether to sort descendently or ascendently to get the top.
+* order: [String] Optional. Whether to sort descendently or ascendently to get the top.
     * _desc_, _asc_
+    * Default: _order=desc_
 
 *Output*
 
@@ -562,10 +564,13 @@ Details about Remote Desktops found on an Host. List of screenshots and details 
 
 *Parameters*
 
-* target: [String] target IP address or CIDR up to /24
-* ocr: [any] if present, shows an additional "words" field, which is a list of words obtained via OCR
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
+* target: [String] Target IP address or CIDR up to /24
+* ocr: [any] Optional. If _ocr=1_, shows an additional "words" field, which is a list of words obtained via OCR
+    * Default: _ocr=0_
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -616,8 +621,10 @@ List of Remote Desktops found (latest first).
 
 *Parameters*
 
-* page: [int] Optional. Default 1
-* pagesize: [int] Optional. Default 100
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -672,8 +679,9 @@ Details about a specific Remote Desktop. This includes the following information
 
 *Parameters*
 
-* image_id: [string] image ID of the image you want the details from
-* ocr: [any] if present, shows an additional "words" field, which is a list of words obtained via OCR
+* image_id: [string] Image ID of the image you want the details from
+* ocr: [any] Optional. If _ocr=1_, shows an additional "words" field, which is a list of words obtained via OCR
+    * Default: _ocr=0_
 
 *Output*
 
@@ -719,8 +727,10 @@ List of Remote Desktops based on a Query. Can be used with specific parameters a
 *Parameters*
 
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](image-search.md) for details on what parameters can be used.
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -770,8 +780,9 @@ Statistics of recent events for the given query. Can be used with specific param
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](image-search.md) for details on what parameters can be used.
 * type: [String] Type of statistic we want to obtain. Possible types include:
     * _ports_, _words_, _tags_, _countries_, _asn_, _rdns_.
-* order: [String] Whether to sort descendently or ascendently to get the top.
+* order: [String] Optional. Whether to sort descendently or ascendently to get the top.
     * _desc_, _asc_
+    * Default: _order=desc_
 
 *Output*
 
@@ -860,7 +871,7 @@ List of torrent events for the specified host, with events for each time that a 
 
 *Parameters*
 
-* target: [String] target IP address or CIDR up to /24
+* target: [String] Target IP address or CIDR up to /24
 
 *Output*
 
@@ -898,7 +909,7 @@ Details about torrents transferred by an Host. List of recent torrent events for
 
 *Parameters*
 
-* target: [String] target IP address or CIDR up to /24
+* target: [String] Target IP address or CIDR up to /24
 
 *Output*
 
@@ -937,8 +948,10 @@ Events based on a Query. List of recent events for the given query, including de
 *Parameters*
 
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](torrents-search.md) for details on what parameters can be used.
-* page: [Int] Optional. Default 1, Maximum: 500 (10,000 results)
-* pagesize: [Int] Optional. Default 100
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -1010,10 +1023,12 @@ Statistics of events for the given query. Can be used with specific parameters a
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](torrents-search.md) for details on what parameters can be used.
 * type: [String] Type of statistic we want to obtain. Possible types include:
     * _ports_, _countries_, _asn_, _ips_, _rdns_, _categories_, _names_.
-* days: [Integer] Number of days to get the stats for. For example days=1 for the last day of data.
-    * Max: 90 (default)
-* order: [String] Whether to sort descendently or ascendently to get the top.
+* days: [Integer] Optional. Number of days to get the stats for. For example, days=1 for the last day of data.
+    * Default: _days=90_
+    * Max: _days=90_
+* order: [String] Optional. Whether to sort descendently or ascendently to get the top.
     * _desc_, _asc_
+    * Default: _order=desc_
 
 *Output*
 
@@ -1099,10 +1114,14 @@ Verify how many emails are affected by dataleaks for a specific domain.
 *Parameters*
 
 * domain: [String] Verify which dataleaks affect the target domain
-* csv: [any] if present, return results in CSV format
-* jsonl: [any] if present, return results in JSON lines format
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
+* csv: [any] Optional. If _csv=1_, return results in CSV format
+    * Default: _csv=0_
+* jsonl: [any] Optional. If _jsonl=1_, return results in JSON lines format
+    * Default: _jsonl=0_
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -1128,7 +1147,8 @@ Get all available information about the dataleaks our platform keeps track.
 
 *Parameters*
 
-* leak: [String] if present, return information about a specific leak (all leaks if not specified)
+* leak: [String] Optional. If present, return information about a specific leak
+    * Default: undefined, return information about all leaks
 
 *Output*
 
@@ -1162,7 +1182,7 @@ More details about scoring can be found on [https://github.com/binaryedge/ratemy
 
 *Parameters*
 
-* target: [String] target IP address 
+* target: [String] Target IP address 
 
 *Output*
 
@@ -2083,8 +2103,10 @@ Return list of subdomains known from the target domains
 *Parameters*
 
 * target: [String] Domain you want to get list of known subdomains.
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -2116,8 +2138,10 @@ Possible types of records currently available:
 *Parameters*
 
 * target: [String] Domain you want to get DNS related data.
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -2163,9 +2187,11 @@ Return records that have the specified IP address in their A or AAAA records.
 
 *Parameters*
 
-* target: [String] target IP address or CIDR up to /24, supports IPV4 or IPV6
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
+* target: [String] Target IP address or CIDR up to /24, supports IPV4 or IPV6
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -2228,8 +2254,10 @@ List of Domains/DNS data based on a Query.  Can be used with specific parameters
 *Parameters*
 
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events.
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -2263,13 +2291,15 @@ curl 'https://api.binaryedge.io/v1/query/domains/search?query=A:127.0.0.1' -H 'X
 
 #### /v1/query/domains/enumeration
 
-This endpoint attempts to enumerate subdomains from a larger dataset, the validate flag can be used to have all subdomains resolved on the fly and only those with DNS entries behind them returned:
-
-* domain
+This endpoint attempts to enumerate subdomains from a larger dataset. The validate flag can be used to have all subdomains resolved on the fly and only those with DNS entries behind them returned.
 
 *Parameters*
 
-* validate: [int] Forces all subdomains to be resolved on request and only live subdomains to be returned
+* domain: [string] Domain you want to enumerate
+* validate: [any] Optional. If _validate=1_, forces all subdomains to be resolved on request and only live subdomains to be returned
+    * Default: _validate=0_
+* total: [int] Optional. Return at most the number of results specified
+    * Default: undefined, return all results
 
 *Output*
 
@@ -2321,13 +2351,15 @@ curl 'https://api.binaryedge.io/v1/query/domains/enumeration/binaryedge.io?valid
 
 #### /v1/query/domains/homoglyphs
 
-This endpoint generates a list of homoglyphs for a base domain and will attempt to resolve all found upon request, if the validate flag isn't used the full list of homoglyphs is returned:
-
-* domain
+This endpoint generates a list of homoglyphs for a base domain. The validate flag can be used to have all homoglyphs resolved on the fly and only those with DNS entries behind them returned.
 
 *Parameters*
 
-* validate: [int] Forces all homoglyphs to be resolved on request and only live homoglyphs to be returned
+* domain: [string] Domain you want to generate homoglyphs
+* validate: [any] Optional. If _validate=1_, forces all homoglyphs to be resolved on request and only live homoglyphs to be returned
+    * Default: _validate=0_
+* total: [int] Optional. Return at most the number of results specified
+    * Default: undefined, return all results
 
 *Output*
 
@@ -2419,7 +2451,7 @@ Details about an Scanner. List of recent events form the specified host, includi
 
 *Parameters*
 
-* target: [String] target IP address or CIDR up to /24
+* target: [String] Target IP address or CIDR up to /24
 
 *Output*
 
@@ -2474,11 +2506,14 @@ Events based on a Query. List of recent events for the given query, including de
 *Parameters*
 
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](sensors-search.md) for details on what parameters can be used.
-* days: [Integer] Number of days to get the stats for. For example days=1 for the last day of data.
-    * Max: 60 (default)
-* page: [Int] Optional. Default 1
-* pagesize: [Int] Optional. Default 100
-* only_ips: [Int] Optional. If selected, only output origin IP addresses, target ports and protocols.
+* days: [Integer] Optional. Number of days to get the reuslts for. For example, days=1 for the last day of data.
+    * Default: _days=30_
+* only_ips: [Int] Optional. If _only\_ips=1_, only output IP addresses, ports and protocols. 
+    * Default: _only\_ips=0_
+* page: [Int] Optional. Results page number.
+    * Default: _page=1_
+* pagesize: [Int] Optional. Results page size.
+    * Default: _pagesize=100_
 
 *Output*
 
@@ -2537,6 +2572,69 @@ curl 'https://api.binaryedge.io/v1/query/sensors/search?query=tags:ssh_scanner' 
 }
 ```
 
+#### /v1/query/sensors/search/stream
+
+Events based on a Query. Stream of recent events for the given query, including details of scanned ports, payloads and tags. Can be used with specific parameters and/or full-text search.
+
+*Parameters*
+
+* query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](sensors-search.md) for details on what parameters can be used.
+* days: [Integer] Optional. Number of days to get the results for. For example, days=1 for the last day of data.
+    * Default: _days=30_
+* only_ips: [Int] Optional. If _only\_ips=1_, only output IP addresses, ports and protocols. 
+    * Default: _only\_ips=0_
+
+*Output*
+
+```shell
+curl 'https://api.binaryedge.io/v1/query/sensors/search/stream?query=tags:ssh_scanner' -H 'X-Token:API_TOKEN'
+```
+
+```json
+{
+  "data": {
+    "payload": "SSH-2.0-PUTTY\\r\\n",
+    "extra": {
+      "ssh": {
+        "description": "SSH-2.0-PUTTY"
+      }
+    },
+    "tags": ["SSH_SCANNER"]
+  },
+  "target": {
+    "port": 22,
+    "protocol": "tcp"
+  },
+  "origin": {
+    "ip": "218.92.1.153",
+    "type": "sinkhole",
+    "ts": 1549625590653,
+    "asn": 4134
+  }
+}, {
+  "target": {
+    "port": 22,
+    "protocol": "tcp"
+  },
+  "data": {
+    "payload": "\\x00\\x00\\x02\\x84\\x07\\x14t\\x85\\x97.Sf\\x88\\xa3\\x1a\\x7f\\xf7:ZzG\\\\\\x00\\x00\\x00Ydiffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1\\x00\\x00\\x00\\x0fssh-rsa,ssh-dss\\x00\\x00\\x00\\x92aes128-ctr,aes192-ctr,aes256-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,blowfish-cbc,arcfour128,arcfour,cast128-cbc,3des-cbc\\x00\\x00\\x00\\x92aes128-ctr,aes192-ctr,aes256-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,blowfish-cbc,arcfour128,arcfour,cast128-cbc,3des-cbc\\x00\\x00\\x00Uhmac-sha1,hmac-sha1-96,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com\\x00\\x00\\x00Uhmac-sha1,hmac-sha1-96,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com\\x00\\x00\\x00\\x04none\\x00\\x00\\x00\\x04none\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00=@\\x8d71\\xc9&",
+    "extra": {
+      "ssh": {
+        "hassh": "92674389fa1e47a27ddd8d9b63ecd42b",
+        "hassh_algorithms": "diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1;aes128-ctr,aes192-ctr,aes256-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,blowfish-cbc,arcfour128,arcfour,cast128-cbc,3des-cbc;hmac-sha1,hmac-sha1-96,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com;none"
+      }
+    },
+    "tags": ["SSH_SCANNER"]
+  },
+  "origin": {
+    "ip": "58.242.83.31",
+    "type": "sinkhole",
+    "ts": 1549625585310,
+    "asn": 4837
+  }
+}
+```
+
 #### /v1/query/sensors/search/stats
 
 Statistics of events for the given query. Can be used with specific parameters and/or full-text search.
@@ -2546,10 +2644,11 @@ Statistics of events for the given query. Can be used with specific parameters a
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](sensors-search.md) for details on what parameters can be used.
 * type: [String] Type of statistic we want to obtain. Possible types include:
     * _ports_, _tags_, _countries_, _asn_, _ips_, _payloads_, _http\_path_, _rdns_.
-* days: [Integer] Number of days to get the stats for. For example days=1 for the last day of data.
-    * Max: 60 (default)
-* order: [String] Whether to sort descendently or ascendently to get the top.
+* days: [Integer] Optional. Number of days to get the stats for. For example, days=1 for the last day of data.
+    * Default: _days=30_
+* order: [String] Optional. Whether to sort descendently or ascendently to get the top.
     * _desc_, _asc_
+    * Default: _order=desc_
 
 *Output*
 
@@ -2589,10 +2688,10 @@ Get a list of IPs that have been associated with a specific TAG. See [List of Ta
 *Parameters*
 
 * tag: [String] Tag you want to get the list of IPs related to.
-    * example: MALICIOUS
-* days: [Integer] Query Param: Number of days to get the stats for. For example days=1 for the last day of data.
-    * Default: 1
-    * Max: 60
+    * Example: _tag=MALICIOUS_
+* days: [Integer] Query Parameter, number of days to get the stats for. For example, days=1 for the last day of data.
+    * Default: _days=1_
+    * Max: _days=60_
 
 *Output*
 
