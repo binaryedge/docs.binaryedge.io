@@ -36,8 +36,6 @@ web.headers.access_control_request_method
 
 web.headers.age
 
-web.headers.all
-
 web.headers.allow
 
 web.headers.alt_svc
@@ -101,10 +99,6 @@ web.headers.expect
 web.headers.expect_ct
 
 web.headers.feature_policy
-
-web.headers.header_order
-
-web.headers.header_order_md5
 
 web.headers.host
 

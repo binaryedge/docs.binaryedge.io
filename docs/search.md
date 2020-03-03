@@ -600,12 +600,27 @@ Search by favicon MMH3 fingerprint.
     e.g. web.favicon.mmh3:"2780979020"
 
 ### headers.*: (string)
-Search by HTTP headers.
+Search on specific HTTP headers.
 
     e.g. web.headers.accept:"json"
 
 #### Available headers
 [Search Available Headers](search-web-headers.md)
+
+### headers.all: (string)
+Search on all HTTP headers.
+
+e.g. web.headers.all:"confluence"
+
+### headers.header_order: (string)
+Search by HTTP header order fingerprint string.
+
+    e.g. web.headers.header_order:"user_agent,host,connection"
+
+### headers.header_order_md5: (string)
+Search by HTTP header order fingerprint hash.
+
+    e.g. web.headers.header_order_md5:"ea54a5e969c426b7815aa5540ab4dd93"
 
 ### path: (string)
 Search by HTTP path.
