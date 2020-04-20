@@ -120,7 +120,7 @@ These are optional parameters that can alter the behaviour of the module. These 
         * link - URL of the favicon
         * mmh3_hash - MMH3 hash of the favicon content (for compliance with other platforms)
         * md5_hash - MD5 hash of the favicon content
-        * content - Full byte content of the favicon
+        * content - Full base64 content of the favicon
     * body - HTML body response
         * link - URL of the extracted HTML content (if not inline)
         * content - Full HTML content (if not uploaded)
