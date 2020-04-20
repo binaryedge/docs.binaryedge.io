@@ -166,6 +166,8 @@ See [More Info](modules/web-enrich.md "web-enrich")
 
 #### http / https
 
+*DEPRECATED - Please refer to the [webv2](modules/webv2.md "webv2") module*
+
 The HTTP/HTTPS modules attempt to connect to an HTTP server and extract HTTP headers, redirects, page title and HTML source code.
 
 See [More Info](modules/http.md "http")

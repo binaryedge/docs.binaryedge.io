@@ -2,6 +2,8 @@
 
 Extract HTTP/HTTPSs information, e.g. HTTP headers, HTTP status codes, HTTP body, and redirects information. Follows up to 5 redirects.
 
+*DEPRECATED - Please refer to the [WebV2](https://docs.binaryedge.io/modules/webv2/) module*
+
 ## HTTP Request Example
 
 ```

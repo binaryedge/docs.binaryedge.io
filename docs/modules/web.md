@@ -2,6 +2,8 @@
 
 Extract Web technologies information and headers.
 
+*DEPRECATED - Please refer to the [WebV2](https://docs.binaryedge.io/modules/webv2/) module*
+
 ## Web Request Example
 
 ```
