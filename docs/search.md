@@ -311,20 +311,45 @@ Search by leaf certificate issuer's Common Name.
 
     e.g. ssl.cert.issuer.common_name:microsoft
 
-### cert.issuer.common_name: (string)
-Search by leaf certificate issuer's Country Name.
-
-    e.g. ssl.cert.issuer.country_name:cn
-
 ### cert.issuer.organization_name: (string)
 Search by leaf certificate issuer's Organization Name.
 
     e.g. ssl.cert.issuer.organization_name:microsoft
 
+For exact match use ssl.cert.issuer.organization_name.keyword .
+
 ### cert.issuer.organizational_unit_name: (string)
 Search by leaf certificate issuer's Organizational Unit Name.
 
     e.g. ssl.cert.issuer.organizational_unit_name:microsoft
+
+For exact match use ssl.cert.issuer.organizational_unit_name.keyword .
+
+    e.g. ssl.cert.issuer.organizational_unit_name.keyword:"CloudFlare Origin SSL Certificate Authority"
+
+### cert.issuer.distinguished_name: (string)
+Search by leaf certificate issuer's Distinguished Name.
+
+    e.g. ssl.cert.issuer.distinguished_name:"Common Name: SUV, Organization: SUV999, State/Province: CA, Country: HK"
+
+For exact match use ssl.cert.issuer.distinguished_name.keyword:
+
+    e.g. ssl.cert.issuer.distinguished_name.keyword:"Common Name: SUV, Organization: SUV999, State/Province: CA, Country: HK"
+
+### cert.issuer.country_name: (string)
+Search by leaf certificate issuer's Country Name.
+
+    e.g. ssl.cert.issuer.country_name:CN
+
+### cert.issuer.locality_name: (string)
+Search by leaf certificate issuer's Locality Name.
+
+    e.g. ssl.cert.issuer.locality_name:"Scottsdale"
+
+### cert.issuer.state_or_province_name: (string)
+Search by leaf certificate issuer's State or Province Name.
+
+    e.g. ssl.cert.issuer.state_or_province_name:"Greater Manchester"
 
 ### cert.issuer_names: (string)
 Search by leaf certificate issuer's names (common_name, organization_name, organizational_unit_name combined).
@@ -403,10 +428,40 @@ Search by leaf certificate subject's Organization Name.
 
     e.g. ssl.cert.subject.organization_name:microsoft
 
+For exact match use ssl.cert.subject.organization_name.keyword .
+
 ### cert.subject.organizational_unit_name: (string)
 Search by leaf certificate subject's Organizational Unit Name.
 
-    e.g. ssl.cert.subject.organizational_unit_name:microsoft
+    e.g. ssl.cert.subject.organizational_unit_name:cloudFlare
+
+For exact match use ssl.cert.subject.organizational_unit_name.keyword .
+
+    e.g. ssl.cert.subject.organizational_unit_name.keyword:"CloudFlare Origin SSL Certificate Authority"
+
+### cert.subject.distinguished_name: (string)
+Search by leaf certificate subject's Distinguished Name.
+
+    e.g. ssl.cert.subject.distinguished_name:"SUV999"
+
+For exact match use ssl.cert.subject.distinguished_name.keyword:
+
+    e.g. ssl.cert.subject.distinguished_name.keyword:"Common Name: SUV, Organization: SUV999, State/Province: CA, Country: HK"
+
+### cert.subject.country_name: (string)
+Search by leaf certificate subject's Country Name.
+
+    e.g. ssl.cert.subject.country_name:CN
+
+### cert.subject.locality_name: (string)
+Search by leaf certificate subject's Locality Name.
+
+    e.g. ssl.cert.subject.locality_name:"Scottsdale"
+
+### cert.subject.state_or_province_name: (string)
+Search by leaf certificate subject's State or Province Name.
+
+    e.g. ssl.cert.subject.state_or_province_name:"Greater Manchester"
 
 ### cert.subject_names: (string)
 Search by leaf certificate subject's names (common_name, organization_name, organizational_unit_name combined).

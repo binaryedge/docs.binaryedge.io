@@ -147,7 +147,8 @@ These are optional parameters that can alter the behaviour of the module. These 
                 "organization_name": "string",
                 "organizational_unit_name": "string",
                 "country_name": "string",
-                "state_or_province_name": "string"
+                "state_or_province_name": "string",
+                "distinguished_name": "string"
               },
               "public_key_info": {
                 "algorithm": "string",
@@ -171,7 +172,8 @@ These are optional parameters that can alter the behaviour of the module. These 
                 "organizational_unit_name": "string",
                 "organization_name": "string",
                 "country_name": "string",
-                "state_or_province_name": "string"
+                "state_or_province_name": "string",
+                "distinguished_name": "string"
               },
               "signature_algorithm": "string",
               "signature_value": "string"
