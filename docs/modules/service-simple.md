@@ -40,6 +40,7 @@ These are optional parameters that can alter the behaviour of the module. These 
               "hostname": "string",
               "extrainfo": "string",
               "cpe": ["string"],
+              "probe": "string",
               "banner": "string",
               "method": "string"
           }
@@ -67,6 +68,7 @@ This module provides the following data (if available):
     * **hostname**: Hostname (if any) offered by the service
     * **extrainfo**: Extra information extracted, can be an OS, version of a framework, etc
     * **cpe**: List of Common Platform Enumeration tags, if available
+    * **probe**: Payload sent to the server
     * **banner**: Server response from which information was extracted
     * **method**: Method used to match or extract information from server responses. Possible values for this field are:
         * **probe_matching**: Server responses matched one of the expected responses for the probes that were sent
