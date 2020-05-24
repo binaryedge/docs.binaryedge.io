@@ -188,17 +188,23 @@ See [More Info](modules/sslv2.md "sslv2")
 
 ### Services
 
+#### ssh
+
+The SSH module attempts to connect to a SSH server and extract all the algorithms supported by the server.
+
+See [More Info](modules/ssh.md "ssh")
+
 #### rsync
 
 The RSYNC module attempts to connect to an RSYNC server anonymously and list the available modules (list the contents at the root directory).
 
 See [More Info](modules/rsync.md "rsync")
 
-#### ssh
+#### ftp
 
-The SSH module attempts to connect to a SSH server and extract all the algorithms supported by the server.
+The FTP module attempts to connect to an FTP server anonymously and recursively list available directories.
 
-See [More Info](modules/ssh.md "ssh")
+See [More Info](modules/ftp.md "ftp")
 
 #### telnet
 
