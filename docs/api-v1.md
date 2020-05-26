@@ -1157,16 +1157,30 @@ curl 'https://api.binaryedge.io/v1/dataleaks/leaks?leak=ashleymadison' -H 'X-Tok
 ```
 
 ```json
-{  
-  "ashleymadison":{  
-    "name":"ashleymadison",
-    "techname":"ashleymadison",
-    "year":"2015",
-    "description":"Ashley Madison is a canadian online dating service for married/ commited people.",
-    "label":"Adult",
-    "data":"email addresses, passwords, usernames, dates of birth, names, payment history, phone numbers, physical addresses, website activity",
-    "logo":"https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/ashleymadison.jpg",
-    "fullname":"Ashley Madison"
+{
+  "ashleymadison": {
+    "name": "ashleymadison",
+    "fullname": "Ashley Madison",
+    "description": "Ashley Madison is a canadian online dating service for married/ commited people.",
+    "date": "2015-07-19",
+    "year": 2015,
+    "data": "Dates of birth, Email addresses, Ethnicities, Genders, Names, Passwords, Payment histories, Phone numbers, Physical addresses, Security questions and answers, Sexual orientations, Usernames, Website activity",
+    "logo": "https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/ashleymadison.jpg",
+    "features": [
+      "Dates of birth",
+      "Email addresses",
+      "Ethnicities",
+      "Genders",
+      "Names",
+      "Passwords",
+      "Payment histories",
+      "Phone numbers",
+      "Physical addresses",
+      "Security questions and answers",
+      "Sexual orientations",
+      "Usernames",
+      "Website activity"
+    ]
   }
 }
 ```

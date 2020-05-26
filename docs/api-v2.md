@@ -934,6 +934,11 @@ curl 'https://api.binaryedge.io/v2/query/dataleaks/organization/example.com' -H 
 
 Get all available information about the dataleaks our platform keeps track.
 
+
+*Parameters*
+
+* leak: [String] Return information about a specific dataleak. If not used will return all.
+
 *Output*
 
 ```shell
@@ -942,35 +947,56 @@ curl 'https://api.binaryedge.io/v2/query/dataleaks/info' -H 'X-Key:API_KEY'
 
 ```json
 {
-  "sktorrent": {
-    "label": "Downloads",
-    "description": "SKTorrent is a torrent tracking site.",
-    "techname": "sktorrent",
-    "logo": "https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/sktorrent.png",
-    "data": "usernames, email addresses, passwords",
-    "year": "2016",
-    "name": "sktorrent",
-    "fullname": "SKTorrent"
+    "abcdomain": {
+    "name": "abcdomain",
+    "fullname": "ABCDomain",
+    "description": "ABC Domain is a web hosting company based in Armenia.",
+    "date": "2013-01-01",
+    "year": 2013,
+    "data": "Email addresses, Passwords, Usernames",
+    "logo": "https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/abcdomain.png",
+    "features": [
+      "Email addresses",
+      "Passwords",
+      "Usernames"
+    ]
   },
-  "samsclub": {
-    "label": "Unverified",
-    "description": "Sam's Club is an american chain of wholesale clubs owned by Walmart.",
-    "techname": "samsclub",
-    "logo": "https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/samsclub.jpg",
-    "data": "email addresses",
-    "year": "2016",
-    "name": "samsclub",
-    "fullname": "Sam's Club"
+  "thredup": {
+    "name": "thredup",
+    "fullname": "thredUp",
+    "description": "thredUP is a fashion resale website for consumers to buy and sell secondhand clothing online",
+    "date": "2019-09-01",
+    "year": 2019,
+    "data": "Email addresses, IP addresses, Geographic locations, Phone numbers",
+    "logo": "https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/thredup.png",
+    "features": [
+      "Email addresses",
+      "IP addresses",
+      "Geographic locations",
+      "Phone numbers"
+    ]
   },
-  "yandex": {
-    "label": "Technology",
-    "description": "Yandex is a technology company that provides the largest search engine in Russia.",
-    "techname": "yandex",
-    "logo": "https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/yandex.png",
-    "data": "email addresses, passwords",
-    "year": "2014",
-    "name": "yandex",
-    "fullname": "Yandex"
+  "spyfone": {
+    "name": "spyfone",
+    "fullname": "SpyFone",
+    "description": "In August 2018, the spyware company <a href=\"https://motherboard.vice.com/en_us/article/9kmj4v/spyware-company-spyfone-terabytes-data-exposed-online-leak\" target=\"_blank\" rel=\"noopener\">SpyFone left terabytes of data publicly exposed</a>. Collected surreptitiously whilst the targets were using their devices, the data included photos, audio recordings, text messages and browsing history which were then exposed via a number of misconfigurations within SpyFone's systems. The data belonged the thousands of SpyFone customers and included 44k unique email addresses, many likely belonging to people the targeted phones had contact with.",
+    "date": "2018-08-16",
+    "year": 2018,
+    "data": "Audio recordings, Browsing histories, Device information, Email addresses, Geographic locations, IMEI numbers, IP addresses, Names, Passwords, Photos, SMS messages",
+    "logo": "https://s3-eu-west-1.amazonaws.com/be-resources/dataleaks/SpyFone.png",
+    "features": [
+      "Audio recordings",
+      "Browsing histories",
+      "Device information",
+      "Email addresses",
+      "Geographic locations",
+      "IMEI numbers",
+      "IP addresses",
+      "Names",
+      "Passwords",
+      "Photos",
+      "SMS messages"
+    ]
   }
 }
 ```
