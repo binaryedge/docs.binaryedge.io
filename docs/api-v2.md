@@ -1341,10 +1341,10 @@ curl 'https://api.binaryedge.io/v2/query/score/ip/xxx.xxx.xxx.xxx' -H 'X-Key:API
               "cpe": "cpe:/a:postfix:postfix",
               "cve_list": [],
               "score": 0,
+              "reason": "no version provided"
             }
           ],
-          "score": 0,
-          "reason": "no version provided"
+          "score": 0
         },
         {
           "port": 3306,
