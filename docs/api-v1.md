@@ -1517,14 +1517,15 @@ curl 'https://api.binaryedge.io/v1/query/score/ip/xxx.xxx.xxx.xxx' -H 'X-Token:A
         },
         {
           "port": 25,
-          "cve": {
-            "cpe": [
-              "cpe:/a:postfix:postfix"
-            ],
-            "cve_list": "no_version_provided",
-            "score": 0
-          },
-          "score": 0
+          "cve": [
+            {
+              "cpe": "cpe:/a:postfix:postfix",
+              "cve_list": [],
+              "score": 0,
+            }
+          ],
+          "score": 0,
+          "reason": "no version provided"
         },
         {
           "port": 3306,
