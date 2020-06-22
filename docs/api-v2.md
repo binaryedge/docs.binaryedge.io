@@ -1113,12 +1113,14 @@ curl 'https://api.binaryedge.io/v2/query/score/ip/xxx.xxx.xxx.xxx' -H 'X-Key:API
         },
         {
           "port": 6666,
-          "cve": {
-            "product": "Postgres-XC",
-            "version": "1.1",
-            "cve_list": [],
-            "score": 0
-          },
+          "cve": [
+            {
+              "product": "Postgres-XC",
+              "version": "1.1",
+              "cve_list": [],
+              "score": 0
+            },
+          ],
           "score": 0
         },
         {
