@@ -3,9 +3,9 @@
 The API has endpoints for querying our data in which you can use free text search together with one or more of the filters listed below.
 
 
-## Notes
+## Read Before
 
-**Free Text**: not specifying a field will search on the full records, which can include other information not stated below. Although free text search without specifying fields is available, it might be processed differently from searching on specific fields. For better results, always specify search fields.
+**Free Text**: not specifying a field will search on the full records, which can include other information not stated below. Although free text search without specifying fields is available, it might be processed differently from searching on specific fields. For better results, always use search fields.
 
 **Conditionals**: the following conditionals are available: NOT, AND, OR. Must be UPPERCASE. You can also use the minus sign (-) as a replacement for the NOT conditional. By default, a sequence of search terms without conditionals will be interpreted as if using the AND conditional. 
 
@@ -13,7 +13,7 @@ The API has endpoints for querying our data in which you can use free text searc
 
 **Field existence or omission**: you can search for records that have a specific field by using _\_exists\_:field_. Conversely, for records missing a field it would be _NOT \_exists\_:field_.
 
-**Wildcards**: you can use wildcards on your query terms. However, for the best results and performance, try to be as specific as you can. E.g. _field:security*_
+**Wildcards**: you can use wildcards on your query terms. These should be rarely used, for the best results and performance, try to be as specific as you can. If you need to use Wildcards, specify the field you want to search in. E.g. _field:security*_
 
 **String fields**: if the string is expected to have spaces, some kind of punctuation in the middle, or special symbols, try quoting the search terms, i.e. instead of querying _field:value_ try _field:"value"_. You can also try instead _field.keyword:"value"_. The first one will search for any occurrence of any of the words in _value_, while the second one will search for an exact match of the string. Finally, in the case of some special symbols, you might require escaping in order to make the query valid.
 
