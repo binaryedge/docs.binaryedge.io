@@ -18,8 +18,8 @@ curl -v -L https://api.binaryedge.io/v1/tasks -d '{"type":"scan", "options":[{"t
   "result": {
     "data": {
       "title": "string",
-      "width": "int",
-      "height": "int",
+      "width": "string",
+      "height": "string",
       "version": "string",
       "link": "string",
       "auth_enabled": "boolean",
@@ -58,8 +58,8 @@ curl -v -L https://api.binaryedge.io/v1/tasks -d '{"type":"scan", "options":[{"t
   "result": {
     "data": {
       "title": "TC13:0.0",
-      "width": 1280,
-      "height": 1024,
+      "width": "1280",
+      "height": "1024",
       "version": "RFB 003.007",
       "link": "https://url/to/image.jpg"
       "auth_enabled": "false"
