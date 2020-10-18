@@ -2523,7 +2523,7 @@ Events based on a Query. List of recent events for the given query, including de
 *Parameters*
 
 * query: [String] String used to query our data. If no filters are used, it will perform a full-text search on the entire events. See [Search Parameters](sensors-search.md) for details on what parameters can be used.
-* days: [Integer] Optional. Number of days to get the reuslts for. For example, days=1 for the last day of data.
+* days: [Integer] Optional. Number of days to get the results for. For example, days=1 for the last day of data.
     * Default: _days=30_
 * only_ips: [Int] Optional. If _only\_ips=1_, only output IP addresses, ports and protocols. 
     * Default: _only\_ips=0_
