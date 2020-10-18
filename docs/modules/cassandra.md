@@ -75,7 +75,7 @@ curl -v -L https://api.binaryedge.io/v1/tasks -d '{"type":"scan", "options":[{"t
   * graph - If DSE: Graph enabled
   * workload - If DSE: List of Workloads
   * cluster_name - Cluster name
-  * rpc_address - RPC addresss
+  * rpc_address - RPC address
   * key
   * rack - Rack of the node
 
