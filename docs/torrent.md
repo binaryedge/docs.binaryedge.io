@@ -55,7 +55,7 @@ Accessible via:
     * **name**: Human readable name of the torrent
     * **source**: Source of the torrent (tracker)
     * **category**: Category of the torrent content
-    * **subcategory**: Subategory of the torrent content
+    * **subcategory**: Subcategory of the torrent content
 
 ## Event Example
 
