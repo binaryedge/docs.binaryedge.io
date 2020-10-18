@@ -267,9 +267,9 @@ These are optional parameters that can alter the behaviour of the module. These 
                 * commonName - common name of the issuer
                 * localityName - locality of the issuer
                 * organizationName - organization name of the issuer
-                * organiationalUnitName - organizational name of the issuer
+                * organizationalUnitName - organizational name of the issuer
                 * countryName - country of the issuer
-                * stateOrProvinceName - stae or province of the issuer
+                * stateOrProvinceName - state or province of the issuer
             * signatureAlgorithm - the certificate signature algorithm
             * signatureValue - the certificate signature
         * sha1_fingerprint - the SHA1 fingerprint of the certificate
