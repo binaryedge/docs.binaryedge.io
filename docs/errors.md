@@ -2,7 +2,7 @@
 
 Performing a malformed query:
 
-```
+```http
 HTTP/1.1 400 Bad Request
 {
     "status": 400,
@@ -13,7 +13,7 @@ HTTP/1.1 400 Bad Request
 
 Sending an invalid Token:
 
-```
+```http
 HTTP/1.1 401 Unauthorized
 {
     "status": 401,
@@ -24,7 +24,7 @@ HTTP/1.1 401 Unauthorized
 
 Accessing a feature you don't have permissions:
 
-```
+```http
 HTTP/1.1 403 Forbidden
 {
     "status": 403,
@@ -35,7 +35,7 @@ HTTP/1.1 403 Forbidden
 
 Accessing a page that does not exist:
 
-```
+```http
 HTTP/1.1 404 Not Found
 {
     "status": 404,

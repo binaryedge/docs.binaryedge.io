@@ -92,7 +92,7 @@ These are optional parameters that can alter the behaviour of the module. These 
 * body - HTML body response
 * httpVersion - HTTP version
 * statusCode - HTTP response status code
-* statusMeessage - HTTP status message
+* statusMessage - HTTP status message
 * headers - HTTP headers (if found)
 * href - Final href found (after redirects if the case)
 * redirects - List of redirects followed

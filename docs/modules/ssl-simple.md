@@ -127,7 +127,7 @@ curl -v -L https://api.binaryedge.io/v1/tasks -d '{"type":"scan", "options":[{"t
     * port - the server's TLS port number
     * ip_address - the server's IP address. If not supplied, a DNS lookup for the specified `hostname` will be performed.
     * ja3 - JA3 is a method for creating SSL/TLS fingerprints for threat intelligence, based on version, cyphers and extensions supported by the server. See https://github.com/salesforce/ja3 for details
-    * ja3_digest - MD5 fingerprint using the extracted informaiton on `ja3`
+    * ja3_digest - MD5 fingerprint using the extracted information on `ja3`
 
 ## SSL Simple Event Example
 

@@ -55,7 +55,7 @@ curl -v -L https://api.binaryedge.io/v1/tasks -d '{"type":"scan", "options":[{"t
 		* server_host_key - Server Host Key Signature Algorithms
 		* encryption - Encryption Algorithms
 		* mac - Message Authentication Code Algorithms
-		* compression - Compressiom Algorithms
+		* compression - Compression Algorithms
 * **banner** - Server response identifying service.
 * **hassh** - Network fingerprinting standard which can be used to identify specific Client and Server SSH implementations. See https://github.com/salesforce/hassh for details.
     * hassh - MD5 fingerprint based on the algorithms supported by the server.

@@ -832,12 +832,12 @@ Search by MQTT topics.
 ## Kubernetes
 
 ### auth_required: (boolean)
-Search by whether Kubernates has auth enabled or not.
+Search by whether Kubernetes has auth enabled or not.
 
     e.g. kubernetes.auth_required:false
 
 ### connected: (boolean)
-Search by whether Kubernates server was successfully connected to or not.
+Search by whether Kubernetes server was successfully connected to or not.
 
     e.g. kubernetes.connected:true
 

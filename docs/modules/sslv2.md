@@ -328,7 +328,7 @@ These are optional parameters that can alter the behaviour of the module. These 
     * xmpp_to_hostname - the hostname to set within the `to` attribute of the XMPP stream. If not supplied, the specified `hostname` will be used. Should only be set if the supplied `tls_wrapped_protocol` is an XMPP protocol
     * tls_server_name_indication - the hostname to set within the Server Name Indication TLS extension. If not supplied, the specified `hostname` will be used
     * ja3 - JA3 is a method for creating SSL/TLS fingerprints for threat intelligence, based on version, cyphers and extensions supported by the server. See https://github.com/salesforce/ja3 for details
-    * ja3_digest - MD5 fingerprint using the extracted informaiton on `ja3`
+    * ja3_digest - MD5 fingerprint using the extracted information on `ja3`
 
 ## SSLv2 Event Example
 
