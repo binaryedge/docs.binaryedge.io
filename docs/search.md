@@ -627,6 +627,19 @@ Search for ROBOT.
     e.g. ssl.vulnerabilities.robot.robot_result_enum:NOT_VULNERABLE_NO_ORACLE
 
 
+## JARM
+
+### jarm: (string)
+Search by JARM fingerprint string:
+
+    e.g. jarm.jarm:"c02b|0303|h2|0000-0017-ff01-000b-0023-0010,cc14|0303|h2|0000-0017-ff01-000b-0023-0010,cc14|0303|h2|0000-0017-ff01-000b-0023-0010,|||,cc14|0303||0000-0017-ff01-000b-0023,c009|0302|h2|0000-0017-ff01-000b-0023-0010,1302|0303||0033-002b,1303|0303||0033-002b,|||,1301|0303||0033-002b"
+
+### jarm_hash: (string)
+Search by JARM fingerprint hash:
+
+    e.g. jarm.jarm_hash:"27d3ed3ed0003ed1dc42d43d00041d6183ff1bfae51ebd88d70384363d525c"
+
+
 ## Web
 
 ### body.content: (string)
@@ -878,6 +891,24 @@ Search by RSYNC status.
 Search by RSYNC version.
 
     e.g. rsync.version:"31.0"
+
+
+## SMB
+
+### dialects: (string)
+Search by SMB dialects.
+
+    e.g. smb.dialects:"2.0.2"
+
+### shares: (string)
+Search on SMB shares.
+
+    e.g. smb.shares:admin
+
+### names: (string)
+Search on SMB shares names.
+
+    e.g. smb.names:admin
 
 
 ## TOR
