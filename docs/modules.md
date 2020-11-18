@@ -186,7 +186,7 @@ The SSLv2 module attempts to connect to an SSL-wrapped server and extract (and p
 
 See [More Info](modules/sslv2.md "sslv2")
 
-#### JARM
+#### jarm
 
 The JARM module attempts to actively fingerprint an SSL/TLS server via a series of TLS Client Hello packets to extract specific responses that can be used to quickly identify default applications or malware.
 
