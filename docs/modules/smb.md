@@ -33,7 +33,7 @@ curl -v -L https://api.binaryedge.io/v1/tasks -d '{"type":"scan", "options":[{"t
 ### Contents of the fields
 
 * **smb_dialects** is an array of SMB dialects supported. Must contain at least one entry
-* **potentential_os** is the OS that corresponds to the highests supported SMB dialect. Will be empty in the case of only SMB dialect 1.0 being detected
+* **potential_os** is the OS that corresponds to the highests supported SMB dialect. Will be empty in the case of only SMB dialect 1.0 being detected
 * **cpe** is an array of CPE identifiers for the corresponding desktop and server versions that correlate with the highest supported SMB dialect. Will be empty in the case of only SMB dialect 1.0 being detected
 * **shares** is an array of detected shares, which may be empty
   * **type** is the designation of SMB share. Vaules can be: "Disk", "IPC", and "Printer"
