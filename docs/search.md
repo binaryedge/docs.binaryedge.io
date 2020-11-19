@@ -895,6 +895,16 @@ Search by RSYNC version.
 
 ## SMB
 
+### cpe: (string)
+Search by CPE.
+
+    e.g. smb.cpe.keyword:"cpe:/o:microsoft:windows_10"
+
+### os_platform: (string)
+Search by SMB.
+
+    e.g. smb.os_platform:windows
+
 ### dialects: (string)
 Search by SMB dialects.
 
