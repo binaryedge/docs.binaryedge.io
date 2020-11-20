@@ -510,7 +510,7 @@ Statistics of recent events for the given query. Can be used with specific param
 *Output*
 
 ```shell
-curl 'https://api.binaryedge.io/v1/query/search/stats?query=product:mysql%20AND%20country:ES&type=ports' -H 'X-Key:API_TOKEN'
+curl 'https://api.binaryedge.io/v1/query/search/stats?query=product:mysql%20AND%20country:ES&type=ports' -H 'X-Token:API_TOKEN'
 ```
 
 ```json
@@ -787,7 +787,7 @@ Statistics of recent events for the given query. Can be used with specific param
 *Output*
 
 ```shell
-curl 'https://api.binaryedge.io/v1/query/image/search/stats?query=tags:rdp%20AND%20country:ES&type=ports' -H 'X-Key:API_TOKEN'
+curl 'https://api.binaryedge.io/v1/query/image/search/stats?query=tags:rdp%20AND%20country:ES&type=ports' -H 'X-Token:API_TOKEN'
 ```
 
 ```json
@@ -956,7 +956,7 @@ Events based on a Query. List of recent events for the given query, including de
 *Output*
 
 ```shell
-curl 'https://api.binaryedge.io/v1/query/torrent/search?query=category:video' -H 'X-Key:API_TOKEN'
+curl 'https://api.binaryedge.io/v1/query/torrent/search?query=category:video' -H 'X-Token:API_TOKEN'
 ```
 
 ```json
@@ -1033,7 +1033,7 @@ Statistics of events for the given query. Can be used with specific parameters a
 *Output*
 
 ```shell
-curl 'https://api.binaryedge.io/v1/query/torrent/search/stats?query=category:video&type=ports' -H 'X-Key:API_TOKEN'
+curl 'https://api.binaryedge.io/v1/query/torrent/search/stats?query=category:video&type=ports' -H 'X-Token:API_TOKEN'
 ```
 
 ```json
