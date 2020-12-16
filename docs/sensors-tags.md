@@ -228,6 +228,7 @@
  | SOGOU | https://www.sogou.com/ | 
  | SQLPING_SCANNER | Sqlping Scanner |
  | SQUEEZECENTER_SCANNER | SqueezeCenter is the media server component of Slim Devices's (now a Logitech company) media playing devices such as Squeezebox |
+ | SOLARWINDS_ORION_SCANNER | Scanner for Solarwinds Orion |
  | SOURCE_ENGINE | Valve Source Engine - Games | 
  | SSH_SCANNER | Valid SSH connections | 
  | SSL_SCANNER | Valid SSL Connections | 
