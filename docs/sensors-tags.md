@@ -49,6 +49,7 @@
  | CVE-2017-12615 | Apache Tomcat 7.0.0 to 7.0.79 has a remote code execution vulnerability |
  | CVE-2017-17215 | Huawei HG532 with some customized versions has a remote code execution vulnerability |
  | CVE-2018-13379 | Some versions of Fortinet FortiOS under SSL VPN web portal allows an unauthenticated attacker to download system files via HTTP resource requests |
+ | CVE-2019-0604 | Microsoft SharePoint Remote Code Execution Vulnerability |
  | CVE-2019-11510 | File reading vulnerability in Pulse Secure Pulse Connect Secure |
  | CVE-2019-15107 | Command injection vulnerability on Webmin through 1.920 |
  | CVE-2019-19781 | An issue was discovered in Citrix Application Delivery Controller (ADC) and Gateway 10.5, 11.1, 12.0, 12.1, and 13.0. They allow Directory Traversal |
@@ -217,6 +218,7 @@
  | SERVICES_HELP | Services Help Scanner | 
  | SEZNAM | https://www.seznam.cz/ crawler | 
  | SHADOWSERVER | https://www.shadowserver.org/wiki/ scanner | 
+ | SHAREPOINT_SCANNER | Scanning for Sharepoint | 
  | SHODAN | Internet wide scanner https://www.shodan.io/ | 
  | SIP_SCANNER | Scanning for SIP /VOIP Servers | 
  | SLURP | Slurp bot for Yahoo | 
