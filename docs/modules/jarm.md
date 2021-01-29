@@ -27,7 +27,7 @@ curl -v -L https://api.binaryedge.io/v1/tasks -d '{"type":"scan", "options":[{"t
 ### Contents of the fields
 
 * jarm - JARM is a method for creating SSL/TLS fingerprints for threat intelligence, based information extracted from the server response to a TLS Client Hello. See https://github.com/salesforce/jarm for details
-* jarm_bash - uzzy hash fingerprint using the extracted information on `jarm`
+* jarm_bash - fuzzy hash fingerprint using the extracted information from `jarm`
 
 ## SSL Simple Event Example
 
