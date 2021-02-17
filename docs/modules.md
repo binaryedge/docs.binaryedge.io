@@ -88,9 +88,15 @@ See [More Info](modules/malware-simple.md "malware-simple")
 
 #### rdp
 
-The RDP module attempts to connect to a RDP server and take a screenshot of the display as well as extract the security level used, if any.
+The RDP module attempts to connect to an RDP server and take a screenshot of the display as well as extract the security level used, if any.
 
 See [More Info](modules/rdp.md "rdp")
+
+#### rdpeudp
+
+The RDP: UDP Transport Extension module attempts to connect to an RDP server over UDP.
+
+See [More Info](modules/rdpeudp.md "rdpeudp")
 
 #### vnc
 
